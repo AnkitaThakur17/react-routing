@@ -26,7 +26,9 @@ const App = () => {
               <Route path="posts" element={<UserPosts/>} />
             </Route>
           </Route>
-
+          <Route path="user/:userId" element={<UserProfile />}>
+        <Route path="posts" element={<UserPosts />} />
+      </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
